@@ -32,7 +32,7 @@ public class SecurityConfiguration {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("")/*whiteList this list*/
+                .requestMatchers("/api/v1/auth/**")/*whiteList this list*/
                 .permitAll()
                 .anyRequest()
                 .authenticated()
